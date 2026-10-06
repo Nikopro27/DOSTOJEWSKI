@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wizytówka Nikodem Połczyński</title>
+  <title>Wizytówka — Jan Kowalski</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- header: nagłówek strony, układany flexboksem -->
   <header class="naglowek">
     <img class="awatar" src="avatar.svg"
-         alt="Zdjęcie avatar ">
+         alt="Awatar: inicjały JK na fioletowym tle">
     <div class="naglowek__tekst">
-      <h1> Nikodem Połczyński</h1>
-      <p class="podtytul">Technik programista klasa 5p2t</p>
+      <h1>Jan Kowalski</h1>
+      <p class="podtytul">Technik programista · klasa 4</p>
     </div>
   </header>
 
   <main>
+
+    <!-- section: samodzielny fragment treści o jednym temacie -->
     <section id="o-mnie">
       <h2>O mnie</h2>
       <p>
-        Jestem uczniem klasy 5p2t w Zespole Szkół Technicznych w Poznaniu. Interesuję się programowaniem, a w szczególności tworzeniem stron internetowych. Chcę rozwijać swoje umiejętności w tym kierunku i zdobywać doświadczenie w pracy nad projektami webowymi.
+        Uczę się programowania aplikacji webowych. Najbardziej interesuje mnie
+        front-end, ale chcę rozumieć też to, co dzieje się po stronie serwera.
       </p>
     </section>
 
@@ -36,6 +41,9 @@
 
     <section id="kontakt">
       <h2>Kontakt</h2>
+
+      <!-- novalidate wyłącza wbudowane dymki przeglądarki,
+           bo walidację robimy sami w main.js -->
       <form id="formularz" novalidate>
 
         <div class="pole">
