@@ -1,25 +1,16 @@
-// Zadanie 1 — obsługa formularza kontaktowego
-// Walidację robimy sami, dlatego formularz ma atrybut novalidate.
+const formularz = document.getElementById("formularz"); 
+const podziekowanie = document.getElementById("podziekowanie"); 
+const podziekowanieTresc = document.getElementById("podziekowanie-tresc"); 
 
-const formularz = document.querySelector("#formularz");
-const podziekowanie = document.querySelector("#podziekowanie");
-const podziekowanieTresc = document.querySelector("#podziekowanie-tresc");
-
-// Opis pól: id pola, komunikat gdy puste i opcjonalna reguła dodatkowa.
-const POLA = [
+const POLA = [ 
   {
-    id: "imie",
-    pusteKomunikat: "Podaj imię i nazwisko.",
-    sprawdz: wartosc =>
-      wartosc.length < 3 ? "Imię i nazwisko musi mieć co najmniej 3 znaki." : "",
-  },
+  id: "imie", 
+  pusteKomunikat: "Podaj imię i nazwisko",
+  sprawdz: wartosc => wartosc.lenght < 3 ? "Imie i nazwisko musi mieć conajmniej 3 znaki" : "",}, 
   {
-    id: "email",
-    pusteKomunikat: "Podaj adres e-mail.",
-    sprawdz: wartosc =>
-      !wartosc.includes("@") || !wartosc.includes(".")
-        ? "To nie wygląda na poprawny adres e-mail."
-        : "",
+    id: "email", 
+    pusteKomunikat: "Podaj adres e-mail",
+    sprawdz:wartosc => !wartosc.includes("@") ? "Adres e-mail musi zawierać znak @" : "",
   },
   {
     id: "temat",
