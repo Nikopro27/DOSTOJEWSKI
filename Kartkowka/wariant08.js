@@ -1,4 +1,12 @@
-// Wariant W08 – dane do kartkówki 1
+// Wariant W08 — dane do kartkówki 1
+// Podejście do formularza: useState (pola kontrolowane)
+//
+// Gotowe teksty do wklejenia w komponencie:
+// - Nagłówek:          `Liczba aplikacji: {aplikacje.length}`
+// - Etykieta pola:      "Numer aplikacji:"
+// - Komunikat błędu:    "Nieprawidłowy numer aplikacji"
+// - Przycisk:           "Zatwierdź wybór" (ten sam we wszystkich wariantach)
+
 const aplikacje = [
     "Spotify",
     "Instagram",
