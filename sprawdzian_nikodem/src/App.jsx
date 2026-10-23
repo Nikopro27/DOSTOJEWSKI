@@ -34,7 +34,15 @@ function App() {
       <h2 className="mb-4">Sprawdzian Nikodem P</h2>
 
 
-
+      <div className="card p-4 shadow-sm">
+        <p><strong>id: </strong> {wybranyElement.id}</p>
+        <p><strong>produkt: </strong> {wybranyElement.produkt}</p>
+        <p><strong>gatunek: </strong> {wybranyElement.gatunek}</p>
+        <p><strong>ilosc: </strong> {wybranyElement.ilosc}</p>
+        <p><strong>nowosci: </strong> {wybranyElement.nowosc ? 'JEST ' : 'NIE JEST'}</p>
+        <button className="btn btn-secondary mt-3" onClick={() => setWybranyElement(null)}>
+          POWRÓC</button>
+      </div>
 
 
     </div>
