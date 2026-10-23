@@ -15,6 +15,16 @@ function App() {
   const [wybranyGatunek, setWybranyGatunek] = useState('Wszystkie');
   const [rosnaco, setRosnaco] = useState(true);
   const [wybranyElement, setWybranyElement] = useState(null);
+
+
+  // FILTROWANIE Z POLECENIA
+  let przefiltrowanaLista = dane.filter((przedmiot) => {
+    if (wybranyGatunek === 'Wszystkie')
+      return true;
+    return przedmiot.gatunek === wybranyGatunek;
+  });
+
+
 }
 
 export default App
