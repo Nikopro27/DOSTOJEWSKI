@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "produkt": "Rock",
+    "gatunek": "Gitarowe",
+    "ilosc": 49,
+    "nowosc": true
+  },
+  {
+    "id": 2,
+    "produkt": "Pop",
+    "gatunek": "Taneczne",
+    "ilosc": 66,
+    "nowosc": false
+  },
+  {
+    "id": 3,
+    "produkt": "Jazz",
+    "gatunek": "Klubowe",
+    "ilosc": 83,
+    "nowosc": true
+  },
+  {
+    "id": 4,
+    "produkt": "Hip-hop",
+    "gatunek": "Gitarowe",
+    "ilosc": 100,
+    "nowosc": true
+  },
+  {
+    "id": 5,
+    "produkt": "Reggae",
+    "gatunek": "Taneczne",
+    "ilosc": 17,
+    "nowosc": false
+  }
+]
