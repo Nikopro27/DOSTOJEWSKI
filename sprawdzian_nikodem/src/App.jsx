@@ -28,6 +28,23 @@ function App() {
   przefiltrowanaLista.sort((a, b) => {
     return rosnaco ? a.ilosc - b.ilosc : b.ilosc - a.ilosc;
   })
+
+  return (
+    <div className="container mt-4">
+      <h2 className="mb-4">Sprawdzian Nikodem P</h2>
+
+
+
+
+
+    </div>
+
+
+
+
+  )
+
+
 }
 
 export default App
