@@ -31,28 +31,51 @@ function App() {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-4">Sprawdzian Nikodem P</h2>
+      <h1 className="mb-4">Sprawdzian Nikodem P</h1>
+
+      {wybranyElement ? (
+        <div className="card p-4 shadow-sm">
+          <h2>Szczegóły elementu</h2>
+          <p><strong>id: </strong> {wybranyElement.id}</p>
+          <p><strong>produkt: </strong> {wybranyElement.produkt}</p>
+          <p><strong>gatunek: </strong> {wybranyElement.gatunek}</p>
+          <p><strong>ilosc: </strong> {wybranyElement.ilosc}</p>
+          <p><strong>nowosci: </strong> {wybranyElement.nowosc ? 'JEST ' : 'NIE JEST ELEMENT'}</p>
+          <button
+            className="btn btn-secondary mt-3"
+            onClick={() => setWybranyElement(null)}
+          >
+            POWRÓĆ
+          </button>
+        </div>
+      ) : (
+        // GŁÓWNY WIDOK 
+        <div>
+          <div className="row mb-4 align-items-center">
+            <div className="col-md-6">
+              <label className="form-label"><strong>Filtruj po gatunku:</strong></label>
+              <select
+                className="form-select"
+                value={wybranyGatunek}
+                onChange={(e) => setWybranyGatunek(e.target.value)}
+              >
+                {gatunki.map((g, index) => (
+                  <option key={index} value={g}>{g}</option>
+                ))}
+              </select>
+            </div>
+          </div>
 
 
-      <div className="card p-4 shadow-sm">
-        <p><strong>id: </strong> {wybranyElement.id}</p>
-        <p><strong>produkt: </strong> {wybranyElement.produkt}</p>
-        <p><strong>gatunek: </strong> {wybranyElement.gatunek}</p>
-        <p><strong>ilosc: </strong> {wybranyElement.ilosc}</p>
-        <p><strong>nowosci: </strong> {wybranyElement.nowosc ? 'JEST ' : 'NIE JEST'}</p>
-        <button className="btn btn-secondary mt-3" onClick={() => setWybranyElement(null)}>
-          POWRÓC</button>
-      </div>
-
-
+        </div>
+      )}
     </div>
 
 
 
 
-  )
 
-
+  );
 }
 
 export default App
