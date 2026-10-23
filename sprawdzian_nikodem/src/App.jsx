@@ -11,11 +11,9 @@ function App() {
   const gatunki = ['Wszystkie', 'Gitarowe', 'Taneczne', 'Klubowe'];
   const pierwszaZListy = 'Gitarowe'; //Pierwszy z listy wartosc
 
-
   const [wybranyGatunek, setWybranyGatunek] = useState('Wszystkie');
   const [rosnaco, setRosnaco] = useState(true);
   const [wybranyElement, setWybranyElement] = useState(null);
-
 
   // FILTROWANIE Z POLECENIA
   let przefiltrowanaLista = dane.filter((przedmiot) => {
@@ -73,20 +71,41 @@ function App() {
                 Sortuj po ilości: {rosnaco ? 'Rosnąco' : 'Malejąco'}
               </button>
             </div>
-
-
           </div>
 
+          {/* LISTA KART */}
+          <div className="row">
+            {przefiltrowanaLista.map((item) => {
 
+              const czyPierwszy = item.gatunek === pierwszaZListy;
+              const borderClass = czyPierwszy ? 'border-primary border-3 shadow' : '';
+
+              return (
+                <div key={item.id} className="col-md-4 mb-3">
+                  <div className={`card h-100 ${borderClass}`}>
+                    <div className="card-body">
+                      <h5 className="card-title">{item.produkt}</h5>
+                      <p className="card-text mb-1"><strong>Gatunek:</strong> {item.gatunek}</p>
+                      <p className="card-text mb-1"><strong>Ilosc:</strong> {item.ilosc}</p>
+                      <p className="card-text mb-3">
+                        <strong>Nowosci :</strong> {item.nowosc ? 'JEST' : 'NIE JEST'}
+                      </p>
+                      <button
+                        className="btn btn-outline-primary btn-sm"
+                        onClick={() => setWybranyElement(item)}
+                      >
+                        Info
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
-
-
-
-
-
   );
 }
 
-export default App
+export default App;
