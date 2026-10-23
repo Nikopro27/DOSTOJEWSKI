@@ -64,6 +64,17 @@ function App() {
                 ))}
               </select>
             </div>
+
+            <div className="col-md-6 text-end mt-3 mt-md-0">
+              <button
+                className="btn btn-primary"
+                onClick={() => setRosnaco(!rosnaco)}
+              >
+                Sortuj po ilości: {rosnaco ? 'Rosnąco' : 'Malejąco'}
+              </button>
+            </div>
+
+
           </div>
 
 
