@@ -24,8 +24,9 @@ function App() {
     return przedmiot.gatunek === wybranyGatunek;
   });
 
+  //Dodanie funkcji sortowania 
   przefiltrowanaLista.sort((a, b) => {
-
+    return rosnaco ? a.ilosc - b.ilosc : b.ilosc - a.ilosc;
   })
 }
 
