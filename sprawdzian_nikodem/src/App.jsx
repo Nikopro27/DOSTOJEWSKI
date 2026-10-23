@@ -24,7 +24,9 @@ function App() {
     return przedmiot.gatunek === wybranyGatunek;
   });
 
+  przefiltrowanaLista.sort((a, b) => {
 
+  })
 }
 
 export default App
